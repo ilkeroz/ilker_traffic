@@ -23,6 +23,7 @@
       union select 'MoveCount-19th-E-R' as a, '19th from East - Right' as b, '19thAndMain' as c
       union select 'MoveCount-19th-E-L' as a, '19th from East - Left' as b, '19thAndMain' as c
       ) desc_table
+      order by eventdesc desc
       ;;
     }
 

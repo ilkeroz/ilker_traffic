@@ -1,7 +1,7 @@
   view: event_descriptions {
     derived_table: {
       sql:
-      select a as eventname, b as eventdesc from
+      select a as eventname, b as eventdesc, c as intersection from
       (
             select 'N02c010bc==>MoveCount-Main-S-Out==>MoveCount-19th-E-R' as a, '_Error-6' as b, '19thAndMain' as c
       union select 'N02c010bc==>MoveCount-Main-S-In==>MoveCount-Main-S-Out' as a, 'Main from South - Thru' as b, '19thAndMain' as c
@@ -36,6 +36,11 @@
     dimension: eventdesc {
       type: string
       sql: ${TABLE}.eventdesc ;;
+    }
+
+    dimension: intersection {
+      type: string
+      sql: ${TABLE}.intersection ;;
     }
 
   }

@@ -16,13 +16,14 @@
       union select 'N02c010b5==>MoveCount-19th-W-In==>MoveCount-19th-W-L' as a, '19th from West - Left' as b, '19thAndMain' as c
       union select 'N02c010b5==>MoveCount-19th-W-In==>MoveCount-19th-W-In' as a, '_Error-2-DoubleCount' as b, '19thAndMain' as c
       union select 'N02c010af==>MoveCount-Main-S-In==>MoveCount-Main-S-R' as a, 'Main from South - Right #2' as b, '19thAndMain' as c
-      union select 'MoveCount-Main-S-R' as a, 'Main from South - Right' as b, '19thAndMain' as c
-      union select 'MoveCount-Main-S-L' as a, 'Main from South - Left' as b, '19thAndMain' as c
-      union select 'MoveCount-Main-N-R' as a, 'Main from North - Right' as b, '19thAndMain' as c
-      union select 'MoveCount-19th-W-R' as a, '19th from West - Right' as b, '19thAndMain' as c
-      union select 'MoveCount-19th-W-L' as a, '19th from West- Left' as b, '19thAndMain' as c
-      union select 'MoveCount-19th-E-R' as a, '19th from East - Right' as b, '19thAndMain' as c
-      union select 'MoveCount-19th-E-L' as a, '19th from East - Left' as b, '19thAndMain' as c
+      union select 'N02c010bc==>MoveCount-Main-S-R' as a, 'Main from South - Right' as b, '19thAndMain' as c
+      union select 'N02c010bc==>MoveCount-Main-S-L' as a, 'Main from South - Left' as b, '19thAndMain' as c
+      union select 'N02c010b5==>MoveCount-Main-N-L' as a, 'Main from North - Left' as b, '19thAndMain' as c
+      union select 'N02c010b5==>MoveCount-Main-N-R' as a, 'Main from North - Right' as b, '19thAndMain' as c
+      union select 'N02c010b5==>MoveCount-19th-W-R' as a, '19th from West - Right' as b, '19thAndMain' as c
+      union select 'N02c010b5==>MoveCount-19th-W-L' as a, '19th from West- Left' as b, '19thAndMain' as c
+      union select 'N02c010bc==>MoveCount-19th-E-R' as a, '19th from East - Right' as b, '19thAndMain' as c
+      union select 'N02c010bc==>MoveCount-19th-E-L' as a, '19th from East - Left' as b, '19thAndMain' as c
       union select 'N02c010bf==>MoveCount-Truman-W-In==>MoveCount-Truman-W-R' as a, 'Truman from West - Right' as b, 'TrumanAndMain' as c
       union select 'N02c010bf==>MoveCount-Main-N-Thru' as a, 'Main from North - Thru' as b, 'TrumanAndMain' as c
       union select 'N02c010fd==>MoveCount-Truman-W-In==>MoveCount-Truman-W-Out' as a, 'Truman from West - Thru' as b, 'TrumanAndMain' as c

@@ -1,7 +1,9 @@
 view: dwh_aggregation_traffic_events {
   derived_table: {
     sql:
-      select siteid,nodeid,aggregation_type,eventcnt,eventid,eventtype,eventname,objectclass,startdt,enddt,date(startday) as startday
+      select siteid,nodeid,aggregation_type,eventcnt,eventid,eventtype,
+             case eventtype when 'COMBO' then eventname else concat(nodeid,'==>',eventname) end as eventname,
+             objectclass,startdt,enddt,date(startday) as startday
       from   dwh_aggregation_traffic_events e
       where  eventname like '%MoveCount%'
       and    aggregation_type = '15min'

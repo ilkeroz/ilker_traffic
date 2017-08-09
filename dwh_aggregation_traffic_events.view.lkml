@@ -3,7 +3,9 @@ view: dwh_aggregation_traffic_events {
     sql:
       select siteid,nodeid,aggregation_type,eventcnt,eventid,eventtype,
              case eventtype when 'COMBO' then eventname else concat(nodeid,'==>',eventname) end as eventname,
-             objectclass,startdt,enddt,date(startday) as startday
+             objectclass,
+             case length(startdt) when 16 then concat(startdt,':00') else startdt end as startdt,
+             enddt,date(startday) as startday
       from   dwh_aggregation_traffic_events e
       where  eventname like '%MoveCount%'
       and    aggregation_type = '15min'
@@ -75,7 +77,7 @@ view: dwh_aggregation_traffic_events {
   dimension_group: time_details {
     type: time
     timeframes: []
-    sql: date_parse(${TABLE}.startdt,'%Y-%m-%d %H:%i') ;;
+    sql: date_parse(${TABLE}.startdt,'%Y-%m-%d %H:%i:%s') ;;
   }
 
   measure: sum_eventcnt {

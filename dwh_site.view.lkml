@@ -1,5 +1,14 @@
 view: dwh_site {
-  sql_table_name: hive.{{ _user_attributes['trafficturns_platform'] }}.dwh_site ;;
+  derived_table: {
+    sql:
+       select distinct s.*
+       from   hive.{{ _user_attributes['trafficturns_platform'] }}.dwh_site s
+       where  s.name = '{{ _user_attributes['sitename'] }}'
+       or     '{{ _user_attributes['sitename'] }}' = 'all'
+       ;;
+      # sql_trigger_value: select date_format(current_timestamp,'%H') ;;
+  }
+
   suggestions: yes
 
   dimension: altitude {

@@ -6,7 +6,7 @@ view: dwh_aggregation_traffic_events {
              objectclass,
              case length(startdt) when 16 then concat(startdt,':00') else startdt end as startdt,
              enddt,date(startday) as startday
-      from   dwh_aggregation_traffic_events e
+      from   hive.{{ _user_attributes['trafficturns_platform'] }}.dwh_aggregation_traffic_events e
       where  eventname like '%MoveCount%'
       and    aggregation_type = '15min'
       and    objectclass in ('car')

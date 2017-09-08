@@ -1,5 +1,5 @@
 view: dwh_node {
-  sql_table_name: hive.dwh_qastage2.dwh_node ;;
+  sql_table_name: hive.{{ _user_attributes['trafficturns_platform'] }}.dwh_node ;;
   suggestions: yes
 
 

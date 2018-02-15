@@ -14,7 +14,7 @@ view: dwh_aggregation_traffic_events {
       --and    nodeid in ('N02c010bc', 'N02c010b5')
       --and    siteid = '62a66b70-6d7e-11e7-beac-15198c2ae903'
       ;;
-      sql_trigger_value: select date_format(current_timestamp,'%H') ;;
+      #sql_trigger_value: select date_format(current_timestamp,'%H') ;;
   }
 
   suggestions: yes

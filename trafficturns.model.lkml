@@ -1,4 +1,4 @@
-connection: "dwh_qastage2"
+connection: "presto-dev3"
 
 # include all the views
 include: "*.view"
